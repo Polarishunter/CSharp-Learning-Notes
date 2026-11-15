@@ -4,9 +4,10 @@
 
 ## 網站內容
 
-- **C# 基礎語法**：變數與資料型態、條件判斷
+- **C# 基礎語法**：變數與資料型態、條件判斷、for 迴圈
 - **Windows Forms**：Button 按鈕事件
 - 每篇皆依照「學習目標 → 觀念講解 → 程式碼範例 → 執行結果 → 練習題目」編排。
+- C# 範例支援語法高亮（highlight.js 11.9.0），可直接複製程式碼。
 - 教材目錄由 `data/lessons.json` 產生，首頁和側邊欄會同步更新。
 - 支援教材搜尋、分類篩選、手機版導覽與深淺色切換。
 
@@ -26,9 +27,10 @@ python -m http.server 8000
 2. 將**這個資料夾內的所有檔案**（包含 `index.html`、`AGENTS.md`、`data/` 和 `lessons/`）推送到儲存庫 `main` 分支的根目錄。
 3. 前往儲存庫 **Settings → Pages → Build and deployment**，Source 選 `Deploy from a branch`，Branch 選 `main`、Folder 選 `/(root)`，再按 Save。
 4. 等待 GitHub Pages 顯示部署成功後，開啟 GitHub Pages 所提供的網址，逐頁檢查導覽及教材內容。
-5. 將**實際產生**的 Repository 與 Pages 網址填入繳交欄位。尚未部署前，不要填入假網址。
+5. 將實際的 Repository 與 Pages 網址填入作業繳交欄位。
 
-> Project Pages 網址通常形如 `https://<帳號>.github.io/<儲存庫>/`，但以 GitHub Pages 實際提供的網址為準。
+**已部署網址**：<https://polarishunter.github.io/CSharp-Learning-Notes/>  
+**GitHub Repository**：<https://github.com/Polarishunter/CSharp-Learning-Notes>
 
 ## AI 如何新增教材
 
@@ -53,6 +55,7 @@ CSharp-Learning-Notes/
 ├── templates/lesson-template.html
 ├── lessons/csharp/variables.html
 ├── lessons/csharp/conditionals.html
+├── lessons/csharp/for-loop.html
 ├── lessons/winforms/button-click.html
 ├── assets/images/
 └── scripts/check_site.py
@@ -68,6 +71,7 @@ python scripts/check_site.py
 
 ## 目前狀態
 
-- 專案檔案：已建立
-- GitHub Repository：**待上傳**
-- GitHub Pages 網址：**待部署**
+- 專案檔案：已建立（4 篇教材）
+- GitHub Repository：**已公開上傳**
+- GitHub Pages：**已部署成功**
+- AGENTS.md 規範驗證：**已依規範新增「for 迴圈」教材，且僅需新增一篇 HTML 與一筆 JSON 資料**
