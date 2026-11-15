@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="C# 程式學習筆記站：以繁體中文循序學習 C# 基礎語法與 Windows Forms。">
+<meta name="color-scheme" content="light dark">
+<title>條件判斷｜C# 程式學習筆記站</title>
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/main.js" defer></script>
+</head>
+<body data-base="../../" data-page="lesson">
+<a href="#main-content" class="skip-link">跳至主要內容</a>
+<div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+<div class="app-shell"><aside class="sidebar" id="site-sidebar" aria-label="教材導覽">
+ <div class="sidebar-top"><a class="brand" href="../../index.html" aria-label="C# 程式學習筆記站，返回首頁">
+      <span class="brand-symbol"><span class="brand-symbol-text">C<span>#</span></span></span>
+      <span class="brand-name"><strong>C# Learning</strong><small>程式學習筆記站</small></span></a><button class="close-sidebar icon-button" id="close-sidebar" aria-label="關閉選單">×</button></div>
+ <div class="sidebar-scroll">
+  <div class="sidebar-section-label">開始學習</div>
+  <a href="../../index.html" class="sidebar-home"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8m-8 4h8"/></svg><span>學習總覽</span></a>
+  <div class="sidebar-section-label sidebar-label-space">教材分類</div>
+  <div id="sidebar-lessons" aria-live="polite"><p class="sidebar-loading">正在讀取教材...</p></div>
+ </div>
+ <div class="sidebar-footer"><span class="status-dot"></span><span>從基礎開始，循序前進</span></div>
+ </aside>
+ <div class="main-shell"><header class="topbar">
+ <div class="topbar-left"><button class="icon-button menu-button" id="open-sidebar" aria-label="開啟教材選單" aria-expanded="false" aria-controls="site-sidebar"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ <nav class="breadcrumbs" aria-label="目前位置"><a href="../../index.html">學習總覽</a><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span>C# 基礎語法</span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span aria-current="page">條件判斷</span></nav></div>
+ <div class="topbar-actions"><span class="topbar-label">C# / Windows Forms</span><button class="icon-button theme-button" type="button" id="theme-toggle" aria-label="切換深色模式" title="切換深色模式"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.8A8.5 8.5 0 0 1 8.2 4a8.5 8.5 0 1 0 11.8 11.8Z"/></svg></button></div>
+ </header>
+ <main id="main-content">
+<div class="lesson-layout"><article class="lesson-article" data-lesson-id="cs-conditionals">
+ <div class="article-top"><div class="article-meta"><span class="article-category"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> C# 基礎語法</span><span class="article-difficulty">初階</span><span class="article-readtime">約 9 分鐘</span></div><h1>條件判斷</h1><p class="article-lead">讓程式不只照順序執行，而是能根據不同情況做決定。</p><p class="prerequisite">建議先閱讀：<a href="variables.html">變數與資料型態</a></p></div>
+ <div class="article-separator"></div>
+ 
+<section class="lesson-section" id="goals"><div class="lesson-section-heading"><span class="section-index">01</span><h2>學習目標</h2></div><p>完成這個單元後，你將能夠：</p><ul class="check-list"><li>理解條件判斷如何改變程式執行流程。</li><li>使用 <code>if</code>、<code>else if</code> 與 <code>else</code> 處理多種情況。</li><li>使用 <code>switch</code> 處理固定選項的判斷。</li></ul></section>
+<section class="lesson-section" id="concept"><div class="lesson-section-heading"><span class="section-index">02</span><h2>觀念講解</h2></div><p>程式不只會從上往下執行，還能根據<strong>條件是否成立</strong>決定要走哪一條路。這就是<strong>條件判斷</strong>。</p><p><code>if</code> 表示「如果條件成立」；<code>else if</code> 表示「否則，如果另一個條件成立」；<code>else</code> 則處理其餘情況。</p><div class="concept-grid"><div><strong>if / else</strong><span>適合判斷區間、比較大小或組合條件。</span></div><div><strong>switch</strong><span>適合依據同一個值，選擇固定的分支。</span></div></div><div class="note note-tip"><span class="note-icon"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8.5 15.5A7 7 0 1 1 15.5 15.5L15 18H9l-.5-2.5Z"/></svg></span><div>條件式常用的比較運算子有 <code>&gt;=</code>（大於或等於）、<code>&lt;=</code>（小於或等於）、<code>==</code>（是否相等）。注意：<code>=</code> 是指定值，不是判斷相等。</div></div></section>
+<section class="lesson-section" id="examples"><div class="lesson-section-heading"><span class="section-index">03</span><h2>程式碼範例</h2></div><h3>範例 A：使用 if / else 判斷成績</h3><p>建立 Console App，將下列內容放入 <code>Program.cs</code>。由於成績是 82，程式會執行第二個條件分支。</p><div class="code-block"><div class="code-block-head"><span class="code-file"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> Program.cs · if / else</span><button class="copy-btn" type="button" aria-label="複製程式碼"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> <span>複製程式碼</span></button></div><pre><code class="language-csharp">using System;
+
+class Program
+{
+    static void Main()
+    {
+        int score = 82;
+
+        if (score &gt;= 90)
+        {
+            Console.WriteLine(&quot;表現優秀&quot;);
+        }
+        else if (score &gt;= 60)
+        {
+            Console.WriteLine(&quot;成績及格&quot;);
+        }
+        else
+        {
+            Console.WriteLine(&quot;再接再厲&quot;);
+        }
+    }
+}</code></pre></div><h3>範例 B：使用 switch 判斷星期</h3><p>以下是<strong>另一份獨立的主控台程式</strong>，請替換原本的 <code>Program.cs</code> 內容執行。</p><div class="code-block"><div class="code-block-head"><span class="code-file"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> Program.cs · switch</span><button class="copy-btn" type="button" aria-label="複製程式碼"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> <span>複製程式碼</span></button></div><pre><code class="language-csharp">using System;
+
+class Program
+{
+    static void Main()
+    {
+        int day = 2;
+
+        switch (day)
+        {
+            case 1:
+                Console.WriteLine(&quot;星期一&quot;);
+                break;
+            case 2:
+                Console.WriteLine(&quot;星期二&quot;);
+                break;
+            default:
+                Console.WriteLine(&quot;其他日期&quot;);
+                break;
+        }
+    }
+}</code></pre></div><p>在 <code>switch</code> 中，<code>case</code> 定義不同選項；<code>break</code> 會結束該分支；沒有符合的選項時會執行 <code>default</code>。</p></section>
+<section class="lesson-section" id="result"><div class="lesson-section-heading"><span class="section-index">04</span><h2>執行結果</h2></div><p><strong>範例 A</strong> 的主控台預期輸出：</p><div class="output-block"><div class="output-title"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> if / else 輸出</div><pre>成績及格</pre></div><p><strong>範例 B</strong> 的主控台預期輸出：</p><div class="output-block"><div class="output-title"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> switch 輸出</div><pre>星期二</pre></div></section>
+<section class="lesson-section" id="practice"><div class="lesson-section-heading"><span class="section-index">05</span><h2>練習題目</h2></div><div class="practice-card"><div class="practice-label">TRY IT YOURSELF</div><h3>設計自己的成績判斷器</h3><p>讓程式依照 <code>score</code> 的分數顯示「優秀」（90 以上）、「及格」（60～89）或「不及格」（低於 60）。</p><div class="practice-check"><strong>完成條件</strong><ul><li>分別測試 95、75、40 三個數字。</li><li>每個分數都只輸出一個正確結果。</li></ul></div></div></section>
+
+ <nav class="lesson-pagination" id="lesson-pagination" aria-label="上下一篇教材"></nav>
+ <div class="lesson-feedback"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><strong>完成這個單元了嗎？</strong><span>試著不看範例，獨立完成練習題目吧！</span></div></div>
+</article><aside class="toc" aria-label="本頁目錄"><div class="toc-title">在這個頁面</div><a href="#goals">學習目標</a><a href="#concept">觀念講解</a><a href="#examples">程式碼範例</a><a href="#result">執行結果</a><a href="#practice">練習題目</a><div class="toc-help"><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8.5 15.5A7 7 0 1 1 15.5 15.5L15 18H9l-.5-2.5Z"/></svg><span>閱讀完畢後，記得親自完成練習。</span></div></aside></div>
+</main>
+ <footer class="site-footer"><span>© C# 程式學習筆記站 · 為初學者設計</span><span>依照 <code>AGENTS.md</code> 持續擴充</span></footer>
+ </div></div>
+</body></html>
