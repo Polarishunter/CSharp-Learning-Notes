@@ -1,0 +1,28 @@
+{
+  "lessons": [
+    {
+      "id": "cs-variables",
+      "category": "csharp",
+      "title": "變數與資料型態",
+      "path": "lessons/csharp/variables.html",
+      "order": 10,
+      "summary": "從 int、double、string 到 bool，寫出你的第一組變數。"
+    },
+    {
+      "id": "cs-conditionals",
+      "category": "csharp",
+      "title": "條件判斷",
+      "path": "lessons/csharp/conditionals.html",
+      "order": 20,
+      "summary": "用 if、else 與 switch，讓程式依條件做不同的事。"
+    },
+    {
+      "id": "wf-button-click",
+      "category": "winforms",
+      "title": "Button 按鈕事件",
+      "path": "lessons/winforms/button-click.html",
+      "order": 10,
+      "summary": "利用 Visual Studio 設計表單，完成第一個按鈕 Click 事件。"
+    }
+  ]
+}
