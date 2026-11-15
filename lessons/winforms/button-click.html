@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="C# 程式學習筆記站：以繁體中文循序學習 C# 基礎語法與 Windows Forms。">
+<meta name="color-scheme" content="light dark">
+<title>Button 按鈕事件｜C# 程式學習筆記站</title>
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/main.js" defer></script>
+</head>
+<body data-base="../../" data-page="lesson">
+<a href="#main-content" class="skip-link">跳至主要內容</a>
+<div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+<div class="app-shell"><aside class="sidebar" id="site-sidebar" aria-label="教材導覽">
+ <div class="sidebar-top"><a class="brand" href="../../index.html" aria-label="C# 程式學習筆記站，返回首頁">
+      <span class="brand-symbol"><span class="brand-symbol-text">C<span>#</span></span></span>
+      <span class="brand-name"><strong>C# Learning</strong><small>程式學習筆記站</small></span></a><button class="close-sidebar icon-button" id="close-sidebar" aria-label="關閉選單">×</button></div>
+ <div class="sidebar-scroll">
+  <div class="sidebar-section-label">開始學習</div>
+  <a href="../../index.html" class="sidebar-home"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8m-8 4h8"/></svg><span>學習總覽</span></a>
+  <div class="sidebar-section-label sidebar-label-space">教材分類</div>
+  <div id="sidebar-lessons" aria-live="polite"><p class="sidebar-loading">正在讀取教材...</p></div>
+ </div>
+ <div class="sidebar-footer"><span class="status-dot"></span><span>從基礎開始，循序前進</span></div>
+ </aside>
+ <div class="main-shell"><header class="topbar">
+ <div class="topbar-left"><button class="icon-button menu-button" id="open-sidebar" aria-label="開啟教材選單" aria-expanded="false" aria-controls="site-sidebar"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ <nav class="breadcrumbs" aria-label="目前位置"><a href="../../index.html">學習總覽</a><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span>Windows Forms</span><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span aria-current="page">Button 按鈕事件</span></nav></div>
+ <div class="topbar-actions"><span class="topbar-label">C# / Windows Forms</span><button class="icon-button theme-button" type="button" id="theme-toggle" aria-label="切換深色模式" title="切換深色模式"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.8A8.5 8.5 0 0 1 8.2 4a8.5 8.5 0 1 0 11.8 11.8Z"/></svg></button></div>
+ </header>
+ <main id="main-content">
+<div class="lesson-layout"><article class="lesson-article" data-lesson-id="wf-button-click">
+ <div class="article-top"><div class="article-meta"><span class="article-category"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4"/></svg> Windows Forms</span><span class="article-difficulty">初階</span><span class="article-readtime">約 10 分鐘</span></div><h1>Button 按鈕事件</h1><p class="article-lead">從表單設計到事件處理，完成第一個可以互動的視窗程式。</p><p class="prerequisite">建議先閱讀：<a href="../csharp/variables.html">變數與資料型態</a></p></div>
+ <div class="article-separator"></div>
+ 
+<section class="lesson-section" id="goals"><div class="lesson-section-heading"><span class="section-index">01</span><h2>學習目標</h2></div><p>完成這個單元後，你將能夠：</p><ul class="check-list"><li>在 Visual Studio 建立 Windows Forms 專案。</li><li>在設計工具中加入 <code>Button</code> 和 <code>Label</code> 控制項。</li><li>使用 <code>Click</code> 事件，讓按鈕被點擊時更新文字。</li></ul></section>
+<section class="lesson-section" id="concept"><div class="lesson-section-heading"><span class="section-index">02</span><h2>觀念講解</h2></div><p><strong>Windows Forms</strong> 是用來建立 Windows 桌面視窗程式的 UI 技術。你可以透過 Visual Studio 的<strong>設計工具</strong>放置按鈕與文字，再以 C# 處理使用者操作。</p><div class="concept-grid"><div><strong>Button</strong><span>可供使用者按下的按鈕控制項。</span></div><div><strong>Label</strong><span>用來在表單上顯示文字。</span></div><div><strong>Click</strong><span>當使用者點擊按鈕時發生的事件。</span></div><div><strong>事件處理方法</strong><span>指定事件發生後要執行的程式碼。</span></div></div><div class="note note-info"><span class="note-icon"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg></span><div>Windows Forms 是 Windows 桌面應用程式技術，需在支援的 Windows 開發環境中實際執行；這個教學網站只是提供操作步驟與程式碼，不會在網頁裡執行 Windows Forms。</div></div></section>
+<section class="lesson-section" id="examples"><div class="lesson-section-heading"><span class="section-index">03</span><h2>程式碼範例</h2></div><h3>步驟一：建立與設定表單</h3><p>在 Windows 的 Visual Studio 中建立 <strong>Windows Forms App（C#）</strong> 專案；此範例以支援 Windows Forms 的 .NET 專案為例。假設專案命名為 <code>FirstWinFormsApp</code>，使用預設表單 <code>Form1</code>。</p><ol class="number-list"><li>在設計工具中，將一個 <strong>Button</strong> 和一個 <strong>Label</strong> 拖曳到表單上。</li><li>在屬性視窗中把 Button 的 <code>(Name)</code> 設成 <code>btnGreet</code>、<code>Text</code> 設成「點我打招呼」。</li><li>將 Label 的 <code>(Name)</code> 設成 <code>lblMessage</code>、<code>Text</code> 設成「尚未點擊」。</li></ol><div class="mock-window" role="img" aria-label="Windows Forms 示意圖：表單中有點我打招呼按鈕，下方顯示尚未點擊"><div class="mock-title"><span class="mock-app-icon"></span> Form1 <span class="mock-window-controls">— &nbsp; □ &nbsp; ×</span></div><div class="mock-content"><span class="mock-button">點我打招呼</span><span class="mock-label">尚未點擊</span></div></div><h3>步驟二：撰寫事件處理程式</h3><p>開啟 <code>Form1.cs</code> 的程式碼檢視，將類別調整為以下範例。<strong>請保留設計工具自動產生的 <code>Form1.Designer.cs</code></strong>，因為控制項是在設計工具裡建立的。</p><div class="code-block"><div class="code-block-head"><span class="code-file"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> Form1.cs</span><button class="copy-btn" type="button" aria-label="複製程式碼"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg> <span>複製程式碼</span></button></div><pre><code class="language-csharp">using System;
+using System.Windows.Forms;
+
+namespace FirstWinFormsApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            btnGreet.Click += BtnGreet_Click;
+        }
+
+        private void BtnGreet_Click(object sender, EventArgs e)
+        {
+            lblMessage.Text = &quot;你好，Windows Forms！&quot;;
+        }
+    }
+}</code></pre></div><p>這段程式在建構子中以 <code>btnGreet.Click += BtnGreet_Click;</code> 訂閱按鈕事件；之後點擊按鈕，便會執行對應方法，更新 <code>lblMessage.Text</code>。</p><div class="note note-tip"><span class="note-icon"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8.5 15.5A7 7 0 1 1 15.5 15.5L15 18H9l-.5-2.5Z"/></svg></span><div>若你先前已在 Visual Studio 設計工具的事件清單設定 <code>Click</code> 事件，請勿再重複用 <code>+=</code> 訂閱同一個事件，以免處理方法執行兩次。</div></div></section>
+<section class="lesson-section" id="result"><div class="lesson-section-heading"><span class="section-index">04</span><h2>執行結果</h2></div><p>按 <strong>F5</strong> 啟動 Windows Forms 程式。初始狀態顯示「尚未點擊」；按下「點我打招呼」按鈕後，Label 的文字會更新：</p><div class="result-state"><div><span class="result-state-label">點擊前</span><strong>尚未點擊</strong></div><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg><div><span class="result-state-label">點擊後</span><strong>你好，Windows Forms！</strong></div></div><p class="subtle-note">這裡呈現的是根據程式碼推導的預期互動結果，而非在瀏覽器中執行的桌面程式。</p></section>
+<section class="lesson-section" id="practice"><div class="lesson-section-heading"><span class="section-index">05</span><h2>練習題目</h2></div><div class="practice-card"><div class="practice-label">TRY IT YOURSELF</div><h3>為表單新增第二個按鈕</h3><p>新增名為 <code>btnReset</code> 的按鈕，文字設為「重設」，點擊後讓 <code>lblMessage</code> 恢復顯示「尚未點擊」。</p><div class="practice-check"><strong>完成條件</strong><ul><li>兩個按鈕有不同的 <code>(Name)</code>。</li><li>打招呼與重設能各自更新 Label。</li><li>事件沒有重複訂閱。</li></ul></div></div></section>
+
+ <nav class="lesson-pagination" id="lesson-pagination" aria-label="上下一篇教材"></nav>
+ <div class="lesson-feedback"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><strong>完成這個單元了嗎？</strong><span>試著不看範例，獨立完成練習題目吧！</span></div></div>
+</article><aside class="toc" aria-label="本頁目錄"><div class="toc-title">在這個頁面</div><a href="#goals">學習目標</a><a href="#concept">觀念講解</a><a href="#examples">程式碼範例</a><a href="#result">執行結果</a><a href="#practice">練習題目</a><div class="toc-help"><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8.5 15.5A7 7 0 1 1 15.5 15.5L15 18H9l-.5-2.5Z"/></svg><span>閱讀完畢後，記得親自完成練習。</span></div></aside></div>
+</main>
+ <footer class="site-footer"><span>© C# 程式學習筆記站 · 為初學者設計</span><span>依照 <code>AGENTS.md</code> 持續擴充</span></footer>
+ </div></div>
+</body></html>
