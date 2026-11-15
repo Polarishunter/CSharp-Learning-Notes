@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="C# 程式學習筆記站：以繁體中文循序學習 C# 基礎語法與 Windows Forms。">
+<meta name="color-scheme" content="light dark">
+<title>C# 程式學習筆記站｜從基礎語法到 Windows Forms</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/main.js" defer></script>
+</head>
+<body data-base="./" data-page="home">
+<a href="#main-content" class="skip-link">跳至主要內容</a>
+<div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+<div class="app-shell"><aside class="sidebar" id="site-sidebar" aria-label="教材導覽">
+ <div class="sidebar-top"><a class="brand" href="./index.html" aria-label="C# 程式學習筆記站，返回首頁">
+      <span class="brand-symbol"><span class="brand-symbol-text">C<span>#</span></span></span>
+      <span class="brand-name"><strong>C# Learning</strong><small>程式學習筆記站</small></span></a><button class="close-sidebar icon-button" id="close-sidebar" aria-label="關閉選單">×</button></div>
+ <div class="sidebar-scroll">
+  <div class="sidebar-section-label">開始學習</div>
+  <a href="./index.html" class="sidebar-home is-active"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8m-8 4h8"/></svg><span>學習總覽</span></a>
+  <div class="sidebar-section-label sidebar-label-space">教材分類</div>
+  <div id="sidebar-lessons" aria-live="polite"><p class="sidebar-loading">正在讀取教材...</p></div>
+ </div>
+ <div class="sidebar-footer"><span class="status-dot"></span><span>從基礎開始，循序前進</span></div>
+ </aside>
+ <div class="main-shell"><header class="topbar">
+ <div class="topbar-left"><button class="icon-button menu-button" id="open-sidebar" aria-label="開啟教材選單" aria-expanded="false" aria-controls="site-sidebar"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ <nav class="breadcrumbs" aria-label="目前位置"><span aria-current="page">學習總覽</span></nav></div>
+ <div class="topbar-actions"><span class="topbar-label">C# / Windows Forms</span><button class="icon-button theme-button" type="button" id="theme-toggle" aria-label="切換深色模式" title="切換深色模式"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.8A8.5 8.5 0 0 1 8.2 4a8.5 8.5 0 1 0 11.8 11.8Z"/></svg></button></div>
+ </header>
+ <main id="main-content">
+<div class="home-content">
+ <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy">
+   <div class="eyebrow"><span class="eyebrow-dot"></span> A LEARNING SPACE FOR BEGINNERS</div>
+   <h1 id="hero-title">把程式學會，<br><span class="hero-accent">從第一行 C# 開始。</span></h1>
+   <p class="hero-description">為初學者整理的 C# 學習筆記。從變數、判斷式到 Windows Forms 視窗程式，透過清楚解說與實際範例，一步一步建立程式思維。</p>
+   <div class="hero-buttons"><a class="btn btn-primary" href="#explore">開始探索教材 <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="btn btn-ghost" href="#learn-method">認識學習方式 <svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a></div>
+   <div class="hero-stats"><div><strong id="total-count">—</strong><span>個教學單元</span></div><span class="stat-separator"></span><div><strong>2</strong><span>大學習主題</span></div><span class="stat-separator"></span><div><strong>100%</strong><span>繁體中文內容</span></div></div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+   <div class="orb orb-one"></div><div class="orb orb-two"></div>
+   <div class="code-preview">
+    <div class="code-preview-head"><span class="preview-dots"><i></i><i></i><i></i></span><span>Program.cs</span><span class="cs-chip">C#</span></div>
+    <div class="code-preview-body"><div><span class="code-line-no">1</span><span class="token-purple">using</span> System;</div>
+     <div><span class="code-line-no">2</span></div><div><span class="code-line-no">3</span><span class="token-purple">class</span> <span class="token-yellow">Program</span></div><div><span class="code-line-no">4</span>{</div>
+     <div><span class="code-line-no">5</span>&nbsp;&nbsp;<span class="token-purple">static void</span> Main()</div><div><span class="code-line-no">6</span>&nbsp;&nbsp;{</div>
+     <div><span class="code-line-no">7</span>&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(</div><div><span class="code-line-no">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-green">"Hello, C#!"</span>);</div>
+     <div><span class="code-line-no">9</span>&nbsp;&nbsp;}</div><div><span class="code-line-no">10</span>}</div></div>
+    <div class="code-preview-output"><span class="output-indicator"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg> OUTPUT</span><span>Hello, C#! <span class="cursor-block"></span></span></div>
+   </div>
+   <div class="float-tag"><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> 每天進步一點點</div>
+  </div>
+ </section>
+ <section class="section categories-section" aria-labelledby="categories-title">
+  <div class="section-heading"><div><div class="section-kicker">LEARNING PATHS</div><h2 id="categories-title">選擇你的學習路線</h2><p>兩個主題，從語法理解走向實際應用。</p></div></div>
+  <div class="category-grid">
+   <a class="category-card category-csharp" href="#explore" data-jump-category="csharp">
+    <div class="category-top"><span class="category-icon purple"><svg class="icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3m6 0h4"/></svg></span><span class="category-number">PATH 01</span></div>
+    <h3>C# 基礎語法</h3><p>打好程式設計的基礎，理解變數、流程控制與常見語法。</p><div class="category-bottom"><span><span id="csharp-count">—</span> 個單元</span><span class="category-arrow"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div>
+   </a>
+   <a class="category-card category-winforms" href="#explore" data-jump-category="winforms">
+    <div class="category-top"><span class="category-icon blue"><svg class="icon" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8m-4-4v4"/></svg></span><span class="category-number">PATH 02</span></div>
+    <h3>Windows Forms</h3><p>從表單設計開始，認識控制項與事件，製作自己的視窗程式。</p><div class="category-bottom"><span><span id="winforms-count">—</span> 個單元</span><span class="category-arrow"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div>
+   </a>
+  </div>
+ </section>
+ <section class="section lessons-section" id="explore" aria-labelledby="lessons-title">
+  <div class="section-heading"><div><div class="section-kicker">ALL LESSONS</div><h2 id="lessons-title">所有教學單元</h2><p>挑選一個主題，現在就開始練習。</p></div><span class="lessons-count" id="filtered-count" aria-live="polite">載入中</span></div>
+  <div class="lesson-toolbar"><div class="search-wrap"><svg class="icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="lesson-search" type="search" placeholder="搜尋教材名稱或內容..." aria-label="搜尋教材"></div><div class="filter-buttons" role="group" aria-label="教材分類篩選"><button class="filter-btn is-selected" data-filter="all" type="button" aria-pressed="true">全部</button><button class="filter-btn" data-filter="csharp" type="button" aria-pressed="false">C# 基礎</button><button class="filter-btn" data-filter="winforms" type="button" aria-pressed="false">Windows Forms</button></div></div>
+  <div id="lesson-cards" class="lesson-grid" aria-live="polite"><div class="loading-card">正在讀取教材清單...</div></div>
+  <div id="lesson-empty" class="empty-state" hidden><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><strong>找不到符合條件的教材</strong><span>請換一個關鍵字，或切換分類試試看。</span></div>
+ </section>
+ <section class="workflow" id="learn-method" aria-labelledby="workflow-title"><div class="workflow-side"><span class="section-kicker">HOW WE LEARN</span><h2 id="workflow-title">學習不只看懂，<br>還要親手做到。</h2><p>每篇教材都採用相同的五段式架構，讓你能把觀念轉換成可實作的能力。</p><span class="workflow-tag">依 AGENTS.md 統一編排</span></div>
+ <div class="workflow-steps"><div><span>01</span><strong>學習目標</strong><small>先知道這次要學什麼</small></div><div><span>02</span><strong>觀念講解</strong><small>以白話認識核心概念</small></div><div><span>03</span><strong>程式碼範例</strong><small>實際閱讀與操作程式</small></div><div><span>04</span><strong>執行結果</strong><small>確認程式會發生什麼</small></div><div><span>05</span><strong>練習題目</strong><small>自己動手鞏固所學</small></div></div></section>
+</div>
+</main>
+ <footer class="site-footer"><span>© C# 程式學習筆記站 · 為初學者設計</span><span>依照 <code>AGENTS.md</code> 持續擴充</span></footer>
+ </div></div>
+</body></html>
