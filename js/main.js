@@ -140,6 +140,13 @@
         target.innerHTML = `${previous ? `<a class="page-turn prev" href="${url(previous)}"><span>← 上一篇</span><strong>${escapeHtml(previous.title)}</strong></a>` : '<div class="page-turn-empty"></div>'}${next ? `<a class="page-turn next" href="${url(next)}"><span>下一篇 →</span><strong>${escapeHtml(next.title)}</strong></a>` : '<div class="page-turn-empty"></div>'}`;
     }
 
+    // Highlight lesson C# snippets. Console outputs and inline code remain unchanged.
+    if (window.hljs && window.hljs.getLanguage('csharp')) {
+        document.querySelectorAll('.code-block pre code.language-csharp').forEach((code) => {
+            window.hljs.highlightElement(code);
+        });
+    }
+
     // Copy controls require no external dependencies.
     document.querySelectorAll('.copy-btn').forEach((button) => {
         button.addEventListener('click', async () => {
