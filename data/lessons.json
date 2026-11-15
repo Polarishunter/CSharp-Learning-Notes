@@ -23,6 +23,14 @@
       "path": "lessons/winforms/button-click.html",
       "order": 10,
       "summary": "利用 Visual Studio 設計表單，完成第一個按鈕 Click 事件。"
+    },
+    {
+      "id": "cs-for-loop",
+      "category": "csharp",
+      "title": "for 迴圈",
+      "path": "lessons/csharp/for-loop.html",
+      "order": 30,
+      "summary": "認識 for 迴圈的三個部分，讓程式重複執行指定次數。"
     }
   ]
 }
